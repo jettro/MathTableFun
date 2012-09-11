@@ -15,6 +15,9 @@
 		1124074C15F9365900A4BD9C /* GSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1124074B15F9365900A4BD9C /* GSAppDelegate.m */; };
 		1124074F15F9365900A4BD9C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1124074D15F9365900A4BD9C /* MainStoryboard.storyboard */; };
 		1124075215F9365900A4BD9C /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1124075115F9365900A4BD9C /* GSViewController.m */; };
+		1147E45F15F95F5B00130ECC /* skylanders-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1147E45E15F95F5B00130ECC /* skylanders-logo.png */; };
+		2880C56BEB357319BB760E3C /* OneShuffledTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */; };
+		2880CA5F9784711C2ED1DEE3 /* ShuffledTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,11 @@
 		1124074E15F9365900A4BD9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1124075015F9365900A4BD9C /* GSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
 		1124075115F9365900A4BD9C /* GSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSViewController.m; sourceTree = "<group>"; };
+		1147E45E15F95F5B00130ECC /* skylanders-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skylanders-logo.png"; sourceTree = "<group>"; };
+		2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneShuffledTableViewController.m; sourceTree = "<group>"; };
+		2880C639FFD3714F46C97ED2 /* ShuffledTablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuffledTablesViewController.h; sourceTree = "<group>"; };
+		2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuffledTablesViewController.m; sourceTree = "<group>"; };
+		2880CEA358CC1CE617E97D33 /* OneShuffledTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneShuffledTableViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 		1124072C15F9365900A4BD9C = {
 			isa = PBXGroup;
 			children = (
+				1147E45E15F95F5B00130ECC /* skylanders-logo.png */,
 				1124074115F9365900A4BD9C /* MathTableFun */,
 				1124073A15F9365900A4BD9C /* Frameworks */,
 				1124073815F9365900A4BD9C /* Products */,
@@ -77,6 +86,10 @@
 		1124074115F9365900A4BD9C /* MathTableFun */ = {
 			isa = PBXGroup;
 			children = (
+				2880C639FFD3714F46C97ED2 /* ShuffledTablesViewController.h */,
+				2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */,
+				2880CEA358CC1CE617E97D33 /* OneShuffledTableViewController.h */,
+				2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */,
 				1124074A15F9365900A4BD9C /* GSAppDelegate.h */,
 				1124074B15F9365900A4BD9C /* GSAppDelegate.m */,
 				1124074D15F9365900A4BD9C /* MainStoryboard.storyboard */,
@@ -152,6 +165,7 @@
 			files = (
 				1124074615F9365900A4BD9C /* InfoPlist.strings in Resources */,
 				1124074F15F9365900A4BD9C /* MainStoryboard.storyboard in Resources */,
+				1147E45F15F95F5B00130ECC /* skylanders-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +179,8 @@
 				1124074815F9365900A4BD9C /* main.m in Sources */,
 				1124074C15F9365900A4BD9C /* GSAppDelegate.m in Sources */,
 				1124075215F9365900A4BD9C /* GSViewController.m in Sources */,
+				2880C56BEB357319BB760E3C /* OneShuffledTableViewController.m in Sources */,
+				2880CA5F9784711C2ED1DEE3 /* ShuffledTablesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +298,7 @@
 				1124075715F9365900A4BD9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
