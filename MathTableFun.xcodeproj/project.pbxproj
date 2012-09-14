@@ -18,6 +18,7 @@
 		1147E45F15F95F5B00130ECC /* skylanders-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1147E45E15F95F5B00130ECC /* skylanders-logo.png */; };
 		2880C56BEB357319BB760E3C /* OneShuffledTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */; };
 		2880CA5F9784711C2ED1DEE3 /* ShuffledTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */; };
+		2880CB69A25D7D99184BEAB3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 2880C618851D7C9169181C67 /* README */; };
 		2880CD6F707B3EA75E9D7A0A /* SelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C815B709C3E4646BF755 /* SelectTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		1124075115F9365900A4BD9C /* GSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSViewController.m; sourceTree = "<group>"; };
 		1147E45E15F95F5B00130ECC /* skylanders-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skylanders-logo.png"; sourceTree = "<group>"; };
 		2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneShuffledTableViewController.m; sourceTree = "<group>"; };
+		2880C618851D7C9169181C67 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2880C639FFD3714F46C97ED2 /* ShuffledTablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuffledTablesViewController.h; sourceTree = "<group>"; };
 		2880C815B709C3E4646BF755 /* SelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewController.m; sourceTree = "<group>"; };
 		2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuffledTablesViewController.m; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		1124072C15F9365900A4BD9C = {
 			isa = PBXGroup;
 			children = (
+				2880C618851D7C9169181C67 /* README */,
 				1147E45E15F95F5B00130ECC /* skylanders-logo.png */,
 				1124074115F9365900A4BD9C /* MathTableFun */,
 				1124073A15F9365900A4BD9C /* Frameworks */,
@@ -171,6 +174,7 @@
 				1124074615F9365900A4BD9C /* InfoPlist.strings in Resources */,
 				1124074F15F9365900A4BD9C /* MainStoryboard.storyboard in Resources */,
 				1147E45F15F95F5B00130ECC /* skylanders-logo.png in Resources */,
+				2880CB69A25D7D99184BEAB3 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
