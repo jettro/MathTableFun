@@ -14,21 +14,12 @@
     int angle;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
-    NSLog(@"Do some init");
     angle = 0;
     lowestTable.text = @"1";
     highestTable.text = @"10";
-
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
     NSLog(@"The lowest value is %@", [(UILabel *) [self.view viewWithTag:101] text]);
     NSLog(@"The highest value is %@", [(UILabel *)[self.view viewWithTag:102] text]);
@@ -48,7 +39,10 @@
     if ([[segue identifier] isEqualToString:@"Choose Table"]) {
         NSLog(@"About to do something with the Choosen table");
         SelectTableViewController *selectTableViewController = [segue destinationViewController];
-        selectTableViewController.selectedTable = @"De tafel";
+        selectTableViewController.selectedTable = lowestTable.text;
+        selectTableViewController.tableSelected = ^(NSString *selectedTable){
+            lowestTable.text = selectedTable;  
+        };
     } else{
         NSLog(@"The Segue is not right %@",[segue identifier]);
     }

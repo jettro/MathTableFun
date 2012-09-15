@@ -11,19 +11,18 @@
 @implementation SelectTableViewController {
 
 }
-@synthesize selectedTable = _selectedTable;
+@synthesize selectedTable;
+@synthesize tableSelected;
 
-- (void) setSelectedTable:(NSString *) newSelectedTable {
-    _selectedTable = newSelectedTable;
-    oldTableLabel.text = _selectedTable;
-}
+- (IBAction) closeModal:(id) sender {
+    NSString *table = tableTextField.text;
+    tableSelected(table);
 
-- (IBAction)closeModal:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)viewDidUnload {
-    oldTableLabel = nil;
-    [super viewDidUnload];
+- (void) viewDidLoad {
+    tableTextField.text = selectedTable;
 }
+
 @end

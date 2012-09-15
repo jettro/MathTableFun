@@ -8,14 +8,14 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SelectTableViewController : UIViewController
-{
-    
+@interface SelectTableViewController : UIViewController {
     __weak IBOutlet UILabel *oldTableLabel;
+    __weak IBOutlet UITextField *tableTextField;
 }
 
 @property(nonatomic, copy) NSString *selectedTable;
+@property(nonatomic, copy) void (^tableSelected) (NSString *);
 
-- (IBAction)closeModal:(id)sender;
+- (IBAction) closeModal:(id) sender;
 
 @end

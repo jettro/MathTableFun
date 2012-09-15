@@ -425,7 +425,6 @@
         <!--Select Table View Controller-->
         <scene sceneID="Gg0-qd-yRy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="37Z-fS-IJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Vhj-hB-abc" customClass="SelectTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8G9-kp-1Ab">
                         <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
@@ -447,7 +446,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YnR-Pq-T2b">
-                                <rect key="frame" x="249" y="48" width="42" height="21"/>
+                                <rect key="frame" x="222" y="48" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -463,10 +462,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="chosenTable" destination="O5N-PQ-FCJ" id="b1X-1f-cfB"/>
                         <outlet property="oldTableLabel" destination="YnR-Pq-T2b" id="LRh-L1-aN6"/>
+                        <outlet property="tableTextField" destination="O5N-PQ-FCJ" id="xXb-K4-26M"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37Z-fS-IJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-834" y="1401"/>
         </scene>
@@ -567,9 +567,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="closeModal:"/>
-                <relationship kind="outlet" name="chosenTable" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="oldChosenTable" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="oldTableLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="ShuffledTablesViewController" superclassName="UIViewController">
