@@ -8,8 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ShuffledTablesViewController : UIViewController
-{
+@interface ShuffledTablesViewController : UIViewController {
 
     __weak IBOutlet UILabel *lowestTable;
     __weak IBOutlet UILabel *highestTable;

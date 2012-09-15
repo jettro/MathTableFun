@@ -9,12 +9,11 @@
 #import "SelectTableViewController.h"
 
 
-@implementation ShuffledTablesViewController
-{
+@implementation ShuffledTablesViewController {
     int angle;
 }
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
 
     angle = 0;
@@ -22,31 +21,30 @@
     highestTable.text = @"10";
 
     NSLog(@"The lowest value is %@", [(UILabel *) [self.view viewWithTag:101] text]);
-    NSLog(@"The highest value is %@", [(UILabel *)[self.view viewWithTag:102] text]);
+    NSLog(@"The highest value is %@", [(UILabel *) [self.view viewWithTag:102] text]);
 }
 
-- (void)viewDidUnload {
+- (void) viewDidUnload {
     lowestTable = nil;
     highestTable = nil;
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation {
     return YES;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void) prepareForSegue:(UIStoryboardSegue *) segue sender:(id) sender {
     if ([[segue identifier] isEqualToString:@"Choose Table"]) {
         NSLog(@"About to do something with the Choosen table");
         SelectTableViewController *selectTableViewController = [segue destinationViewController];
         selectTableViewController.selectedTable = lowestTable.text;
-        selectTableViewController.tableSelected = ^(NSString *selectedTable){
-            lowestTable.text = selectedTable;  
+        selectTableViewController.tableSelected = ^(NSString *selectedTable) {
+            lowestTable.text = selectedTable;
         };
-    } else{
-        NSLog(@"The Segue is not right %@",[segue identifier]);
+    } else {
+        NSLog(@"The Segue is not right %@", [segue identifier]);
     }
 }
-
 
 @end

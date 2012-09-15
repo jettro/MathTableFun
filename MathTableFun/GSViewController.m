@@ -10,45 +10,16 @@
 
 @implementation GSViewController
 
-- (void)viewDidLoad
-{
+- (void) viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidUnload
-{
-    selectedTableNumber = nil;
-    timesOne = nil;
-    timesTwo = nil;
-    timesThree = nil;
-    timesFour = nil;
-    timesFive = nil;
-    timesSix = nil;
-    timesSeven = nil;
-    timesEight = nil;
-    timesNine = nil;
-    timesTen = nil;
-    answerOne = nil;
-    answerTwo = nil;
-    answerThree = nil;
-    answerFour = nil;
-    answerFive = nil;
-    answerSix = nil;
-    answerSeven = nil;
-    answerEight = nil;
-    answerNine = nil;
-    answerTen = nil;
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) interfaceOrientation {
     return YES;
 }
 
-- (IBAction)changeTableAction:(id)sender {
+- (IBAction) changeTableAction:(id) sender {
     NSLog(@"Je hebt de tafel van %@ gekozen", selectedTableNumber.text);
     timesOne.text = selectedTableNumber.text;
     timesTwo.text = selectedTableNumber.text;
@@ -67,7 +38,7 @@
     [self clearInputFields];
 }
 
-- (void)clearInputFields {
+- (void) clearInputFields {
     answerOne.backgroundColor = [UIColor clearColor];
     answerTwo.backgroundColor = [UIColor clearColor];
     answerThree.backgroundColor = [UIColor clearColor];
@@ -104,7 +75,7 @@
 
 }
 
-- (IBAction)checkInput:(id)sender {
+- (IBAction) checkInput:(id) sender {
     int numErrors = [self markAsCorrectOrNot:answerOne times:1];
     numErrors += [self markAsCorrectOrNot:answerTwo times:2];
     numErrors += [self markAsCorrectOrNot:answerThree times:3];
@@ -121,7 +92,7 @@
     }
 }
 
-- (int) markAsCorrectOrNot:(UITextField *) fieldToCheck times:(int)times {
+- (int) markAsCorrectOrNot:(UITextField *) fieldToCheck times:(int) times {
     if (fieldToCheck.text.intValue == (times * selectedTableNumber.text.intValue)) {
         fieldToCheck.backgroundColor = [UIColor greenColor];
         [fieldToCheck setUserInteractionEnabled:NO];

@@ -8,8 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface OneShuffledTableViewController : UIViewController
-{
+@interface OneShuffledTableViewController : UIViewController {
 
     __weak IBOutlet UILabel *chosenTable;
 }
