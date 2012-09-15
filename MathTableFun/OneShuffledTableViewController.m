@@ -11,13 +11,7 @@
 @implementation OneShuffledTableViewController
 
 - (void) viewDidLoad {
-    [super viewDidLoad];
     chosenTable.text = @"1";
-}
-
-- (void) viewDidUnload {
-    chosenTable = nil;
-    [super viewDidUnload];
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation {

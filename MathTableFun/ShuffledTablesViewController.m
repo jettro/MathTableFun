@@ -8,7 +8,6 @@
 #import "ShuffledTablesViewController.h"
 #import "SelectTableViewController.h"
 
-
 @implementation ShuffledTablesViewController {
     int angle;
 }
@@ -22,12 +21,6 @@
 
     NSLog(@"The lowest value is %@", [(UILabel *) [self.view viewWithTag:101] text]);
     NSLog(@"The highest value is %@", [(UILabel *) [self.view viewWithTag:102] text]);
-}
-
-- (void) viewDidUnload {
-    lowestTable = nil;
-    highestTable = nil;
-    [super viewDidUnload];
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation {
