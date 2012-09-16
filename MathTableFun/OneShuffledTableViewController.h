@@ -11,6 +11,12 @@
 @interface OneShuffledTableViewController : UIViewController {
 
     __weak IBOutlet UILabel *chosenTable;
+    __weak IBOutlet UILabel *tableTimesLabel;
+    __weak IBOutlet UILabel *currentTableLabel;
+    __weak IBOutlet UITextField *answerInput;
+    __weak IBOutlet UITextView *answersReport;
 }
+- (IBAction)nextAssignment:(id)sender;
+
 
 @end

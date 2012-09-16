@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface GSViewController : UIViewController {
-    __weak IBOutlet UITextField *selectedTableNumber;
+    __weak IBOutlet UILabel *selectedTableNumber;
+
+    __weak IBOutlet UIButton *selectTableNumberButton;
 
     __weak IBOutlet UILabel *timesOne;
     __weak IBOutlet UILabel *timesTwo;
@@ -35,8 +37,6 @@
     __weak IBOutlet UITextField *answerTen;
 }
 
-- (IBAction) changeTableAction:(id) sender;
-
-- (IBAction) checkInput:(id) sender;
+- (IBAction)checkInput:(id)sender;
 
 @end

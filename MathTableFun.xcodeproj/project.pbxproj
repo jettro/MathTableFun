@@ -16,7 +16,9 @@
 		1124074F15F9365900A4BD9C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1124074D15F9365900A4BD9C /* MainStoryboard.storyboard */; };
 		1124075215F9365900A4BD9C /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1124075115F9365900A4BD9C /* GSViewController.m */; };
 		1147E45F15F95F5B00130ECC /* skylanders-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1147E45E15F95F5B00130ECC /* skylanders-logo.png */; };
+		2880C395FC88E7FB6C2358D7 /* TableSelectorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C4C2D600CBCBA28C57E2 /* TableSelectorUtility.m */; };
 		2880C56BEB357319BB760E3C /* OneShuffledTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */; };
+		2880C84D39CC775F23DCA6EA /* NSMutableArrayShuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C18FADAEA5BD08850B11 /* NSMutableArrayShuffle.m */; };
 		2880CA5F9784711C2ED1DEE3 /* ShuffledTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880CA937DD2C239F0B947B5 /* ShuffledTablesViewController.m */; };
 		2880CB69A25D7D99184BEAB3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 2880C618851D7C9169181C67 /* README */; };
 		2880CD6F707B3EA75E9D7A0A /* SelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2880C815B709C3E4646BF755 /* SelectTableViewController.m */; };
@@ -38,6 +40,10 @@
 		1124075115F9365900A4BD9C /* GSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSViewController.m; sourceTree = "<group>"; };
 		1147E45E15F95F5B00130ECC /* skylanders-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skylanders-logo.png"; sourceTree = "<group>"; };
 		2880C07BA0400ADFE51B677A /* OneShuffledTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneShuffledTableViewController.m; sourceTree = "<group>"; };
+		2880C18FADAEA5BD08850B11 /* NSMutableArrayShuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayShuffle.m; sourceTree = "<group>"; };
+		2880C370C75D1988A2485A66 /* NSMutableArrayShuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayShuffle.h; sourceTree = "<group>"; };
+		2880C4BC09C8DCB5E290789C /* TableSelectorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSelectorUtility.h; sourceTree = "<group>"; };
+		2880C4C2D600CBCBA28C57E2 /* TableSelectorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSelectorUtility.m; sourceTree = "<group>"; };
 		2880C618851D7C9169181C67 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2880C639FFD3714F46C97ED2 /* ShuffledTablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuffledTablesViewController.h; sourceTree = "<group>"; };
 		2880C815B709C3E4646BF755 /* SelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTableViewController.m; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 		1124074115F9365900A4BD9C /* MathTableFun */ = {
 			isa = PBXGroup;
 			children = (
+				2880C370C75D1988A2485A66 /* NSMutableArrayShuffle.h */,
+				2880C18FADAEA5BD08850B11 /* NSMutableArrayShuffle.m */,
+				2880C4BC09C8DCB5E290789C /* TableSelectorUtility.h */,
+				2880C4C2D600CBCBA28C57E2 /* TableSelectorUtility.m */,
 				2880CD6A43B45B53938B9E82 /* SelectTableViewController.h */,
 				2880C815B709C3E4646BF755 /* SelectTableViewController.m */,
 				2880C639FFD3714F46C97ED2 /* ShuffledTablesViewController.h */,
@@ -191,6 +201,8 @@
 				2880C56BEB357319BB760E3C /* OneShuffledTableViewController.m in Sources */,
 				2880CA5F9784711C2ED1DEE3 /* ShuffledTablesViewController.m in Sources */,
 				2880CD6F707B3EA75E9D7A0A /* SelectTableViewController.m in Sources */,
+				2880C395FC88E7FB6C2358D7 /* TableSelectorUtility.m in Sources */,
+				2880C84D39CC775F23DCA6EA /* NSMutableArrayShuffle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

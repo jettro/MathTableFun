@@ -7,33 +7,44 @@
 //
 
 #import "GSViewController.h"
+#import "TableSelectorUtility.h"
 
 @implementation GSViewController
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) interfaceOrientation {
+- (void)viewDidLoad {
+    [selectTableNumberButton setTitle:@"Kies een tafel" forState:UIControlStateNormal];
+    [selectTableNumberButton setTitle:@"Vul eerst de tafel goed in" forState:UIControlStateDisabled];
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
 }
 
-- (IBAction) changeTableAction:(id) sender {
-    NSLog(@"Je hebt de tafel van %@ gekozen", selectedTableNumber.text);
-    timesOne.text = selectedTableNumber.text;
-    timesTwo.text = selectedTableNumber.text;
-    timesThree.text = selectedTableNumber.text;
-    timesFour.text = selectedTableNumber.text;
-    timesFive.text = selectedTableNumber.text;
-    timesSix.text = selectedTableNumber.text;
-    timesSeven.text = selectedTableNumber.text;
-    timesEight.text = selectedTableNumber.text;
-    timesNine.text = selectedTableNumber.text;
-    timesTen.text = selectedTableNumber.text;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    void (^block)(void) = ^() {
+        NSLog(@"Je hebt de tafel van %@ gekozen vanuit het Block", selectedTableNumber.text);
+        timesOne.text = selectedTableNumber.text;
+        timesTwo.text = selectedTableNumber.text;
+        timesThree.text = selectedTableNumber.text;
+        timesFour.text = selectedTableNumber.text;
+        timesFive.text = selectedTableNumber.text;
+        timesSix.text = selectedTableNumber.text;
+        timesSeven.text = selectedTableNumber.text;
+        timesEight.text = selectedTableNumber.text;
+        timesNine.text = selectedTableNumber.text;
+        timesTen.text = selectedTableNumber.text;
 
-    [selectedTableNumber setUserInteractionEnabled:NO];
-    [selectedTableNumber setBackgroundColor:[UIColor yellowColor]];
-
-    [self clearInputFields];
+        [selectTableNumberButton setEnabled:NO];
+        [self clearInputFields];
+    };
+    NSLog(@"Vlak voor aanroepen modal");
+    [TableSelectorUtility selectTableFromControllerUsingSegue:segue withName:@"Choose Table" intoLabel:selectedTableNumber withBlock:block];
+    NSLog(@"Vlak na aanroepen modal");
 }
 
-- (void) clearInputFields {
+- (void)clearInputFields {
     answerOne.backgroundColor = [UIColor clearColor];
     answerTwo.backgroundColor = [UIColor clearColor];
     answerThree.backgroundColor = [UIColor clearColor];
@@ -70,7 +81,7 @@
 
 }
 
-- (IBAction) checkInput:(id) sender {
+- (IBAction)checkInput:(id)sender {
     int numErrors = [self markAsCorrectOrNot:answerOne times:1];
     numErrors += [self markAsCorrectOrNot:answerTwo times:2];
     numErrors += [self markAsCorrectOrNot:answerThree times:3];
@@ -82,12 +93,11 @@
     numErrors += [self markAsCorrectOrNot:answerNine times:9];
     numErrors += [self markAsCorrectOrNot:answerTen times:10];
     if (numErrors == 0) {
-        [selectedTableNumber setUserInteractionEnabled:YES];
-        [selectedTableNumber setBackgroundColor:[UIColor clearColor]];
+        [selectTableNumberButton setEnabled:YES];
     }
 }
 
-- (int) markAsCorrectOrNot:(UITextField *) fieldToCheck times:(int) times {
+- (int)markAsCorrectOrNot:(UITextField *)fieldToCheck times:(int)times {
     if (fieldToCheck.text.intValue == (times * selectedTableNumber.text.intValue)) {
         fieldToCheck.backgroundColor = [UIColor greenColor];
         [fieldToCheck setUserInteractionEnabled:NO];
@@ -96,5 +106,11 @@
         return 1;
     }
 
+}
+
+- (void)viewDidUnload {
+    selectedTableNumber = nil;
+    selectTableNumberButton = nil;
+    [super viewDidUnload];
 }
 @end
