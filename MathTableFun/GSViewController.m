@@ -24,7 +24,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     void (^block)(void) = ^() {
-        NSLog(@"Je hebt de tafel van %@ gekozen vanuit het Block", selectedTableNumber.text);
         timesOne.text = selectedTableNumber.text;
         timesTwo.text = selectedTableNumber.text;
         timesThree.text = selectedTableNumber.text;
@@ -39,9 +38,7 @@
         [selectTableNumberButton setEnabled:NO];
         [self clearInputFields];
     };
-    NSLog(@"Vlak voor aanroepen modal");
     [TableSelectorUtility selectTableFromControllerUsingSegue:segue withName:@"Choose Table" intoLabel:selectedTableNumber withBlock:block];
-    NSLog(@"Vlak na aanroepen modal");
 }
 
 - (void)clearInputFields {
